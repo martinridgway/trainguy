@@ -138,6 +138,7 @@ h1, h2 {
 }
 
 h1 {
+  margin: 0;
   font-size: 3rem;
 }
 
@@ -151,18 +152,20 @@ header {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   grid-column-start: 2;
+  padding: 2rem 0;
+}
+
+footer .logo {
+  padding-bottom: 0;
 }
 
 .logo img {
   background: #06697A;
   padding: 0.3rem 0.5rem;
   margin-right: 1rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
 }
 
 main {
@@ -175,12 +178,18 @@ main {
 footer {
     display: grid;
     grid-area: footer;
-    grid-template-columns: 2rem 5fr 2fr 2rem;
+    grid-template-columns: 2rem auto 2rem;
     margin-top: 2rem;
     border-top: 5rem solid #06697A;
-    padding-top: 1rem;
+    padding: 1rem 0;
     background: #13B5D1;
     color: #06697A;
+}
+
+@media screen and (min-device-width: 900px) {
+  footer {
+    grid-template-columns: 2rem 5fr minmax(400px, 2fr) 2rem;
+  }
 }
 
 footer p {
@@ -195,13 +204,24 @@ footer a:hover {
   text-decoration: none;
 }
 
-.sources {
+.sources, .about {
   grid-column-start: 2;
+}
+
+@media screen and (min-device-width: 900px) {
+  .about {
+    grid-column-start: 3;
+  }
 }
 
 .sources p, .sources li {
   font-size: 1rem;
-  line-height: 1.4
+  line-height: 1.4;
+}
+
+.sources ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
 }
 
 .about {
