@@ -251,6 +251,10 @@ button {
     background: #fff;
     border: 1px solid #BBB;
     font-family: inherit;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
     transition: all 150ms ease;
 }
 
