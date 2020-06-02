@@ -199,6 +199,15 @@ footer a:hover {
   grid-column-start: 2;
 }
 
+.sources p, .sources li {
+  font-size: 1rem;
+  line-height: 1.4
+}
+
+.about {
+  align-self: end;
+}
+
 
 /* Media objects */
 button {
