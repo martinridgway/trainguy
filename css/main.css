@@ -208,9 +208,18 @@ footer a:hover {
   grid-column-start: 2;
 }
 
+.about {
+  margin-top: 2rem;
+  border-top: 1px solid #06697A;
+  padding-top: 0.5rem;
+}
+
 @media screen and (min-device-width: 900px) {
   .about {
     grid-column-start: 3;
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
   }
 }
 
