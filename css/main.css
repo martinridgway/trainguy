@@ -1,0 +1,287 @@
+@font-face {
+  font-family: 'BritishRailDarkNormal';
+  src:
+    url('BritishRailDarkNormal.woff2') format('woff2'),
+    url('BritishRailDarkNormal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Keyframes for shake animation */
+@keyframes shake-rotate {
+    2% {
+      transform: translate(0, 0) rotate(-2.5deg); }
+    4% {
+      transform: translate(0, 0) rotate(-1.5deg); }
+    6% {
+      transform: translate(0, 0) rotate(4.5deg); }
+    8% {
+      transform: translate(0, 0) rotate(-2.5deg); }
+    10% {
+      transform: translate(0, 0) rotate(3.5deg); }
+    12% {
+      transform: translate(0, 0) rotate(7.5deg); }
+    14% {
+      transform: translate(0, 0) rotate(4.5deg); }
+    16% {
+      transform: translate(0, 0) rotate(4.5deg); }
+    18% {
+      transform: translate(0, 0) rotate(2.5deg); }
+    20% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    22% {
+      transform: translate(0, 0) rotate(0.5deg); }
+    24% {
+      transform: translate(0, 0) rotate(2.5deg); }
+    26% {
+      transform: translate(0, 0) rotate(-2.5deg); }
+    28% {
+      transform: translate(0, 0) rotate(-4.5deg); }
+    30% {
+      transform: translate(0, 0) rotate(3.5deg); }
+    32% {
+      transform: translate(0, 0) rotate(-2.5deg); }
+    34% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    36% {
+      transform: translate(0, 0) rotate(2.5deg); }
+    38% {
+      transform: translate(0, 0) rotate(-2.5deg); }
+    40% {
+      transform: translate(0, 0) rotate(2.5deg); }
+    42% {
+      transform: translate(0, 0) rotate(5.5deg); }
+    44% {
+      transform: translate(0, 0) rotate(6.5deg); }
+    46% {
+      transform: translate(0, 0) rotate(-4.5deg); }
+    48% {
+      transform: translate(0, 0) rotate(-0.5deg); }
+    50% {
+      transform: translate(0, 0) rotate(3.5deg); }
+    52% {
+      transform: translate(0, 0) rotate(1.5deg); }
+    54% {
+      transform: translate(0, 0) rotate(-1.5deg); }
+    56% {
+      transform: translate(0, 0) rotate(-4.5deg); }
+    58% {
+      transform: translate(0, 0) rotate(-0.5deg); }
+    60% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    62% {
+      transform: translate(0, 0) rotate(-0.5deg); }
+    64% {
+      transform: translate(0, 0) rotate(6.5deg); }
+    66% {
+      transform: translate(0, 0) rotate(6.5deg); }
+    68% {
+      transform: translate(0, 0) rotate(-2.5deg); }
+    70% {
+      transform: translate(0, 0) rotate(0.5deg); }
+    72% {
+      transform: translate(0, 0) rotate(2.5deg); }
+    74% {
+      transform: translate(0, 0) rotate(6.5deg); }
+    76% {
+      transform: translate(0, 0) rotate(-6.5deg); }
+    78% {
+      transform: translate(0, 0) rotate(-1.5deg); }
+    80% {
+      transform: translate(0, 0) rotate(2.5deg); }
+    82% {
+      transform: translate(0, 0) rotate(-1.5deg); }
+    84% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    86% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    88% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    90% {
+      transform: translate(0, 0) rotate(-1.5deg); }
+    92% {
+      transform: translate(0, 0) rotate(-5.5deg); }
+    94% {
+      transform: translate(0, 0) rotate(4.5deg); }
+    96% {
+      transform: translate(0, 0) rotate(5.5deg); }
+    98% {
+      transform: translate(0, 0) rotate(4.5deg); }
+    0%, 100% {
+      transform: translate(0, 0) rotate(0); }
+}
+
+body {
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        "footer footer footer";
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
+    color: #3D4852;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1, h2 {
+    display: inline-block;
+    padding: 0.2rem 0.5rem 0.1rem;
+    font-family: 'BritishRailDarkNormal';
+    font-weight: normal;
+    font-style: normal;
+    background:#06697A;
+    color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+header {
+    display:grid;
+    grid-area: header;
+    grid-template-columns: 2rem auto 2rem;
+    position: sticky;
+    margin-bottom: 2rem;
+    background: #13B5D1;
+}
+
+.logo {
+  grid-column-start: 2;
+}
+
+.logo img {
+  background: #06697A;
+  padding: 0.3rem 0.5rem;
+  margin-right: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 1rem;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 2rem 5fr 2fr 2rem;
+    margin-top: 2rem;
+    border-top: 5rem solid #06697A;
+    padding-top: 1rem;
+    background: #13B5D1;
+    color: #06697A;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+.sources {
+  grid-column-start: 2;
+}
+
+
+/* Media objects */
+button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    min-height: 65px;
+    padding: 0 0.5rem;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #BBB;
+    font-family: inherit;
+    transition: all 150ms ease;
+}
+
+button > img {
+    margin: 0 0.66rem 0 0;
+}
+
+button > p {
+    flex: 1;
+    margin: 0.75rem 1.5rem 0.75rem 0;
+}
+
+button:hover {
+    background: #E2E2E2;
+}
+
+button:active {
+    border-color: rgb(237,38,41);
+    transform-origin: center center;
+    animation-name: shake-rotate;
+    animation-duration: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+/* NEW ribbon */
+.rbn {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+
+.rbn b {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: rgb(237,38,41);
+    background: linear-gradient(rgb(237,38,41) 0%, rgb(218, 51, 54) 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+
+.rbn b::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #8F0808;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #8F0808;
+}
+
+.rbn b::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #8F0808;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #8F0808;
+}
